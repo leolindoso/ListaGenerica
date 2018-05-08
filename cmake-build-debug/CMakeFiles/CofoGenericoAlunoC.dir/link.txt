@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/CofoGenericoAlunoC.dir/main.c.o CMakeFiles/CofoGenericoAlunoC.dir/CofoAluno.c.o  -o CofoGenericoAlunoC 

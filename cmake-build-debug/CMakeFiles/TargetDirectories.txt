@@ -1,0 +1,3 @@
+/home/leolindoso/CLionProjects/CofoGenericoAlunoC/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/leolindoso/CLionProjects/CofoGenericoAlunoC/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/leolindoso/CLionProjects/CofoGenericoAlunoC/cmake-build-debug/CMakeFiles/CofoGenericoAlunoC.dir
