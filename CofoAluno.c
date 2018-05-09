@@ -13,6 +13,7 @@ sllist *sllCreate( ){
     l = (sllist *)malloc(sizeof(sllist ));
     if (l != NULL){
         l -> first = NULL;
+        l->cur = NULL;
         return l;
     }
     return NULL;
@@ -27,20 +28,7 @@ int sllDestroy(sllist *l){
     return FALSE;
 }
 
-//INSERE COMO PRIMEIRO NA LISTA
-int sllInsertFirst(sllist *l, void *data){
-    slnode *newnode;
-    if (l != NULL){
-        newnode = (slnode *) malloc (sizeof(slnode));
-        if (newnode != NULL){
-            newnode -> data = data;
-            newnode -> next = l -> first;
-            l -> first = newnode;
-            return TRUE;
-        }
-    }
-    return FALSE;
-}
+
 
 //REMOVE O PRIMEIRO DA LISTA
 void *sllRemoveFirst( sllist *l){
@@ -76,6 +64,41 @@ void *sllquery(sllist *l, void *key, int (*cmp)( void *, void *)){
         }
     }
     return NULL;
+}
+//INSERE COMO PRIMEIRO NA LISTA
+int sllInsertFirst(sllist *l, void *data){
+    slnode *newnode;
+    if (l != NULL){
+        newnode = (slnode *) malloc (sizeof(slnode));
+        if (newnode != NULL){
+            newnode -> data = data;
+            newnode -> next = l -> first;
+            l -> first = newnode;
+            return TRUE;
+        }
+    }
+    return FALSE;
+}
+
+//INSERE COMO ULTIMO NA LISTA
+int sllInsertLast(sllist *l, void *data){
+    slnode *newnode,*aux;
+    if(l != NULL){
+        if(l->first != NULL){
+            aux = l->first;
+            while(aux->next != NULL){
+                aux = aux->next;
+            }
+            newnode = (slnode*)malloc(sizeof(slnode));
+            if(newnode != NULL){
+                newnode->data = data;
+                newnode->next = aux->next;
+                aux->next = newnode;
+            }
+            return TRUE;
+        }
+    }
+    return FALSE;
 }
 
 // INSERE ANTES DO NÓ ESPECIFICADO
@@ -160,6 +183,23 @@ void *sllRemoveSpec(sllist *l,void *key,int(*cmp)(void*,void*)){
                 return data;
             }
         }
+    }
+    return NULL;
+}
+
+
+int sllNumNodes(sllist *l){
+    int i = 0;
+    if(l != NULL){
+        if(l->first != NULL){
+            slnode *aux;
+            aux = l->first;
+            while(aux != NULL){
+                i++;
+                aux = aux->next;
+            }
+        }
+        return i;
     }
     return NULL;
 }
