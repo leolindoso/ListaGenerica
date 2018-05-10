@@ -8,7 +8,7 @@
 #define FALSE 0
 
 //CRIA LISTA SIMPLESMENTE ENCADEADA if(c != NULL){
-sllist *sllCreate( ){
+sllist *sllCreate(){
     sllist *l;
     l = (sllist *)malloc(sizeof(sllist ));
     if (l != NULL){
@@ -40,6 +40,24 @@ void *sllRemoveFirst( sllist *l){
             data = aux -> data;
             l -> first = aux -> next;
             free(aux);
+            return data;
+        }
+    }
+    return NULL;
+}
+
+void *sllRemoveLast(sllist *l){
+    slnode *cur;
+    void *data;
+    if(l != NULL){
+        if(l->first != NULL){
+            l->cur = l->first;
+            cur = l->cur;
+            while(cur->next != NULL){
+                cur = cur->next;
+            }
+            data = cur->data;
+            free(cur);
             return data;
         }
     }
@@ -202,6 +220,18 @@ int sllNumNodes(sllist *l){
         return i;
     }
     return NULL;
+}
+
+void sllImprime(sllist *l){
+    if(l != NULL){
+        if(l->first != NULL){
+            l->cur = l->first;
+            while(l->cur != NULL){
+                printf("[%d]   ->\t",(int)l->cur->data);
+                l->cur = l->cur->next;
+            }
+        }
+    }
 }
 
 

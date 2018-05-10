@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/leolindoso/CLionProjects/ListaGenerica/CofoAluno.c
+CofoAluno.h
+/home/leolindoso/CLionProjects/ListaGenerica/CofoAluno.h
+stdlib.h
+-
+string.h
+-
+stdio.h
+-
+
+/home/leolindoso/CLionProjects/ListaGenerica/CofoAluno.h
+
+/home/leolindoso/CLionProjects/ListaGenerica/main.c
+stdio.h
+-
+stdlib.h
+-
+CofoAluno.h
+/home/leolindoso/CLionProjects/ListaGenerica/CofoAluno.h
+
