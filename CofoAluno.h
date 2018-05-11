@@ -27,7 +27,7 @@ void *sllRemoveSpec(sllist *l,void *key,int(*cmp)(void*,void*));
 int sllNumNodes(sllist *l);
 int sllNumOcurr(sllist *l,void *key,int (*cmp)(void *,void *));
 void sllImprime(sllist *l);
-//HEADERS DE COMPARAÇÃO
+//HEADERS DO ALUNO
 int CmpData(void *a, void *b);
 
 

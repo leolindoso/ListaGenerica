@@ -8,15 +8,19 @@ int main() {
     int b,d;
     int resp,modo = 100;
 
-    l = sllCreate();
+    if(l != NULL){
+        l = sllCreate();
+    }else if (l->first != NULL){
+        printf("A Lista ja foi criado com %i elementos\n", sllNumNodes(l));
+        modo = 100;
+    }
 
     //INICIO DO MENU
     while(modo != 0){
         //IMPRIME TODAS AS OPÇÕES NA TELA
-        if (modo == 100){
+        if (modo >= 12){
             modo = 101;
             printf("\n");
-            //printf("1 - Criar Lista\n");
             printf("1 - Inserir no Começo da Lista\n");
             printf("2 - Inserir no Fim da Lista\n");
             printf("3 - Inserir no Antes do Especificado da Lista\n");
@@ -35,12 +39,7 @@ int main() {
         }
         //ESCOLHE A OPÇÃO DE CRIAR A LISTA
         /*if(modo == 1){
-            if(l != NULL){
-                    l = sllCreate();
-            }else if (l->first != NULL){
-                printf("Lista ja foi criado com %i elementos\n", sllNumNodes(l));
-                modo = 100;
-            }
+
         modo = 100;
         }*/
         //ESCOLHE A OPÇÃO DE INSERIR UM ELEMENTO NO COMEÇO DA LISTA
@@ -69,8 +68,8 @@ int main() {
             }
             modo = 100;
         }
-        //INSERE ANTES DO NO ESPECIFICADO
         if(modo == 3){
+            //fflush(stdin);
             int numProcurado;
             printf("Informe qual numero quer achar: ");
             scanf("%i",&numProcurado);
@@ -85,7 +84,6 @@ int main() {
             }
             modo = 100;
         }
-        //INSERE DEPOIS DO NÓ ESPECIFICADO
         if(modo == 4){
             int numProcurado;
             printf("Informe qual numero quer achar: ");
@@ -178,8 +176,8 @@ int main() {
         if(modo == 10){
             int n = sllNumNodes(l);
             if(n == -1){
-                printf("Não há elementos na lista!");
-            }else{
+                printf("Não tem elementos na Lista\n");
+            }else {
                 sllImprime(l);
             }
             modo = 100;
@@ -188,11 +186,10 @@ int main() {
         if(modo == 11){
             int n = sllNumNodes(l);
             if(n == -1){
-                printf("Não há elementos na lista!");
-            }else{
-                printf("A Lista tem %i Elementos\n",sllNumNodes(l));
+                printf("Não tem elementos na Lista\n");
+            }else {
+                printf("A Lista tem %i Elementos\n", sllNumNodes(l));
             }
-
             modo = 100;
         }
 
