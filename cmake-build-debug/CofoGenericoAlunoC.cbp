@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/leolindoso/CLionProjects/ListaGenerica/cmake-build-debug"/>
+				<Option working_dir="/home/leolindoso/CLionProjects/ListaGenerica-master/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/leolindoso/CLionProjects/ListaGenerica/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/leolindoso/CLionProjects/ListaGenerica/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/leolindoso/CLionProjects/ListaGenerica/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/leolindoso/CLionProjects/ListaGenerica/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/leolindoso/CLionProjects/ListaGenerica-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/leolindoso/CLionProjects/ListaGenerica-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/leolindoso/CLionProjects/ListaGenerica-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/leolindoso/CLionProjects/ListaGenerica-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/leolindoso/CLionProjects/ListaGenerica/cmake-build-debug"/>
+				<Option working_dir="/home/leolindoso/CLionProjects/ListaGenerica-master/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/leolindoso/CLionProjects/ListaGenerica/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/leolindoso/CLionProjects/ListaGenerica/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/leolindoso/CLionProjects/ListaGenerica/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/leolindoso/CLionProjects/ListaGenerica/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/leolindoso/CLionProjects/ListaGenerica-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/leolindoso/CLionProjects/ListaGenerica-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/leolindoso/CLionProjects/ListaGenerica-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/leolindoso/CLionProjects/ListaGenerica-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/leolindoso/CLionProjects/ListaGenerica/cmake-build-debug"/>
+				<Option working_dir="/home/leolindoso/CLionProjects/ListaGenerica-master/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/leolindoso/CLionProjects/ListaGenerica/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/leolindoso/CLionProjects/ListaGenerica/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/leolindoso/CLionProjects/ListaGenerica/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/leolindoso/CLionProjects/ListaGenerica/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/leolindoso/CLionProjects/ListaGenerica-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/leolindoso/CLionProjects/ListaGenerica-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/leolindoso/CLionProjects/ListaGenerica-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/leolindoso/CLionProjects/ListaGenerica-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="CofoGenericoAlunoC">
-				<Option output="/home/leolindoso/CLionProjects/ListaGenerica/cmake-build-debug/CofoGenericoAlunoC" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/leolindoso/CLionProjects/ListaGenerica/cmake-build-debug"/>
+				<Option output="/home/leolindoso/CLionProjects/ListaGenerica-master/cmake-build-debug/CofoGenericoAlunoC" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/leolindoso/CLionProjects/ListaGenerica-master/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -51,15 +51,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/leolindoso/CLionProjects/ListaGenerica/cmake-build-debug/Makefile&quot;  VERBOSE=1 CofoGenericoAlunoC"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/leolindoso/CLionProjects/ListaGenerica/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/leolindoso/CLionProjects/ListaGenerica/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/leolindoso/CLionProjects/ListaGenerica/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/leolindoso/CLionProjects/ListaGenerica-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 CofoGenericoAlunoC"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/leolindoso/CLionProjects/ListaGenerica-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/leolindoso/CLionProjects/ListaGenerica-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/leolindoso/CLionProjects/ListaGenerica-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="CofoGenericoAlunoC/fast">
-				<Option output="/home/leolindoso/CLionProjects/ListaGenerica/cmake-build-debug/CofoGenericoAlunoC" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/leolindoso/CLionProjects/ListaGenerica/cmake-build-debug"/>
+				<Option output="/home/leolindoso/CLionProjects/ListaGenerica-master/cmake-build-debug/CofoGenericoAlunoC" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/leolindoso/CLionProjects/ListaGenerica-master/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -71,23 +71,23 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/leolindoso/CLionProjects/ListaGenerica/cmake-build-debug/Makefile&quot;  VERBOSE=1 CofoGenericoAlunoC/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/leolindoso/CLionProjects/ListaGenerica/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/leolindoso/CLionProjects/ListaGenerica/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/leolindoso/CLionProjects/ListaGenerica/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/leolindoso/CLionProjects/ListaGenerica-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 CofoGenericoAlunoC/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/leolindoso/CLionProjects/ListaGenerica-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/leolindoso/CLionProjects/ListaGenerica-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/leolindoso/CLionProjects/ListaGenerica-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/leolindoso/CLionProjects/ListaGenerica/CofoAluno.c">
+		<Unit filename="/home/leolindoso/CLionProjects/ListaGenerica-master/CofoAluno.c">
 			<Option target="CofoGenericoAlunoC"/>
 		</Unit>
-		<Unit filename="/home/leolindoso/CLionProjects/ListaGenerica/CofoAluno.h">
+		<Unit filename="/home/leolindoso/CLionProjects/ListaGenerica-master/CofoAluno.h">
 			<Option target="CofoGenericoAlunoC"/>
 		</Unit>
-		<Unit filename="/home/leolindoso/CLionProjects/ListaGenerica/main.c">
+		<Unit filename="/home/leolindoso/CLionProjects/ListaGenerica-master/main.c">
 			<Option target="CofoGenericoAlunoC"/>
 		</Unit>
-		<Unit filename="/home/leolindoso/CLionProjects/ListaGenerica/CMakeLists.txt">
+		<Unit filename="/home/leolindoso/CLionProjects/ListaGenerica-master/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

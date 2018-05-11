@@ -218,13 +218,13 @@ int sllNumNodes(sllist *l){
             cur = l->first;
             while(cur != NULL){
                 i++;
-                printf("%d\n",(int)cur->data);
+                //printf("%d\n",(int)cur->data);
                 cur = cur->next;
             }
             return i;
         }
     }
-    return NULL;
+    return -1;
 }
 // IMPRIME OS NÓS DA LISTA
 void sllImprime(sllist *l){

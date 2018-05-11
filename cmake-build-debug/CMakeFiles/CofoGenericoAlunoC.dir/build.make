@@ -43,10 +43,10 @@ RM = /home/leolindoso/CLion/clion-2017.3.4/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/leolindoso/CLionProjects/ListaGenerica
+CMAKE_SOURCE_DIR = /home/leolindoso/CLionProjects/ListaGenerica-master
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/leolindoso/CLionProjects/ListaGenerica/cmake-build-debug
+CMAKE_BINARY_DIR = /home/leolindoso/CLionProjects/ListaGenerica-master/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/CofoGenericoAlunoC.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/CofoGenericoAlunoC.dir/flags.make
 
 CMakeFiles/CofoGenericoAlunoC.dir/main.c.o: CMakeFiles/CofoGenericoAlunoC.dir/flags.make
 CMakeFiles/CofoGenericoAlunoC.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leolindoso/CLionProjects/ListaGenerica/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/CofoGenericoAlunoC.dir/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/CofoGenericoAlunoC.dir/main.c.o   -c /home/leolindoso/CLionProjects/ListaGenerica/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leolindoso/CLionProjects/ListaGenerica-master/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/CofoGenericoAlunoC.dir/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/CofoGenericoAlunoC.dir/main.c.o   -c /home/leolindoso/CLionProjects/ListaGenerica-master/main.c
 
 CMakeFiles/CofoGenericoAlunoC.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/CofoGenericoAlunoC.dir/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/leolindoso/CLionProjects/ListaGenerica/main.c > CMakeFiles/CofoGenericoAlunoC.dir/main.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/leolindoso/CLionProjects/ListaGenerica-master/main.c > CMakeFiles/CofoGenericoAlunoC.dir/main.c.i
 
 CMakeFiles/CofoGenericoAlunoC.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CofoGenericoAlunoC.dir/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/leolindoso/CLionProjects/ListaGenerica/main.c -o CMakeFiles/CofoGenericoAlunoC.dir/main.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/leolindoso/CLionProjects/ListaGenerica-master/main.c -o CMakeFiles/CofoGenericoAlunoC.dir/main.c.s
 
 CMakeFiles/CofoGenericoAlunoC.dir/main.c.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/CofoGenericoAlunoC.dir/main.c.o.provides.build: CMakeFiles/CofoGeneri
 
 CMakeFiles/CofoGenericoAlunoC.dir/CofoAluno.c.o: CMakeFiles/CofoGenericoAlunoC.dir/flags.make
 CMakeFiles/CofoGenericoAlunoC.dir/CofoAluno.c.o: ../CofoAluno.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leolindoso/CLionProjects/ListaGenerica/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/CofoGenericoAlunoC.dir/CofoAluno.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/CofoGenericoAlunoC.dir/CofoAluno.c.o   -c /home/leolindoso/CLionProjects/ListaGenerica/CofoAluno.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leolindoso/CLionProjects/ListaGenerica-master/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/CofoGenericoAlunoC.dir/CofoAluno.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/CofoGenericoAlunoC.dir/CofoAluno.c.o   -c /home/leolindoso/CLionProjects/ListaGenerica-master/CofoAluno.c
 
 CMakeFiles/CofoGenericoAlunoC.dir/CofoAluno.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/CofoGenericoAlunoC.dir/CofoAluno.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/leolindoso/CLionProjects/ListaGenerica/CofoAluno.c > CMakeFiles/CofoGenericoAlunoC.dir/CofoAluno.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/leolindoso/CLionProjects/ListaGenerica-master/CofoAluno.c > CMakeFiles/CofoGenericoAlunoC.dir/CofoAluno.c.i
 
 CMakeFiles/CofoGenericoAlunoC.dir/CofoAluno.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CofoGenericoAlunoC.dir/CofoAluno.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/leolindoso/CLionProjects/ListaGenerica/CofoAluno.c -o CMakeFiles/CofoGenericoAlunoC.dir/CofoAluno.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/leolindoso/CLionProjects/ListaGenerica-master/CofoAluno.c -o CMakeFiles/CofoGenericoAlunoC.dir/CofoAluno.c.s
 
 CMakeFiles/CofoGenericoAlunoC.dir/CofoAluno.c.o.requires:
 
@@ -117,7 +117,7 @@ CofoGenericoAlunoC: CMakeFiles/CofoGenericoAlunoC.dir/main.c.o
 CofoGenericoAlunoC: CMakeFiles/CofoGenericoAlunoC.dir/CofoAluno.c.o
 CofoGenericoAlunoC: CMakeFiles/CofoGenericoAlunoC.dir/build.make
 CofoGenericoAlunoC: CMakeFiles/CofoGenericoAlunoC.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/leolindoso/CLionProjects/ListaGenerica/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable CofoGenericoAlunoC"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/leolindoso/CLionProjects/ListaGenerica-master/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable CofoGenericoAlunoC"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CofoGenericoAlunoC.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -135,6 +135,6 @@ CMakeFiles/CofoGenericoAlunoC.dir/clean:
 .PHONY : CMakeFiles/CofoGenericoAlunoC.dir/clean
 
 CMakeFiles/CofoGenericoAlunoC.dir/depend:
-	cd /home/leolindoso/CLionProjects/ListaGenerica/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/leolindoso/CLionProjects/ListaGenerica /home/leolindoso/CLionProjects/ListaGenerica /home/leolindoso/CLionProjects/ListaGenerica/cmake-build-debug /home/leolindoso/CLionProjects/ListaGenerica/cmake-build-debug /home/leolindoso/CLionProjects/ListaGenerica/cmake-build-debug/CMakeFiles/CofoGenericoAlunoC.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/leolindoso/CLionProjects/ListaGenerica-master/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/leolindoso/CLionProjects/ListaGenerica-master /home/leolindoso/CLionProjects/ListaGenerica-master /home/leolindoso/CLionProjects/ListaGenerica-master/cmake-build-debug /home/leolindoso/CLionProjects/ListaGenerica-master/cmake-build-debug /home/leolindoso/CLionProjects/ListaGenerica-master/cmake-build-debug/CMakeFiles/CofoGenericoAlunoC.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/CofoGenericoAlunoC.dir/depend
 

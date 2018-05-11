@@ -1,4 +1,4 @@
-# Install script for directory: /home/leolindoso/CLionProjects/ListaGenerica
+# Install script for directory: /home/leolindoso/CLionProjects/ListaGenerica-master
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/leolindoso/CLionProjects/ListaGenerica/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/leolindoso/CLionProjects/ListaGenerica-master/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
