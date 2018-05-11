@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/leolindoso/CLionProjects/CofoGenericoAlunoC/CofoAluno.c" "/home/leolindoso/CLionProjects/CofoGenericoAlunoC/cmake-build-debug/CMakeFiles/CofoGenericoAlunoC.dir/CofoAluno.c.o"
-  "/home/leolindoso/CLionProjects/CofoGenericoAlunoC/main.c" "/home/leolindoso/CLionProjects/CofoGenericoAlunoC/cmake-build-debug/CMakeFiles/CofoGenericoAlunoC.dir/main.c.o"
+  "/home/leolindoso/CLionProjects/ListaGenerica/CofoAluno.c" "/home/leolindoso/CLionProjects/ListaGenerica/cmake-build-debug/CMakeFiles/CofoGenericoAlunoC.dir/CofoAluno.c.o"
+  "/home/leolindoso/CLionProjects/ListaGenerica/main.c" "/home/leolindoso/CLionProjects/ListaGenerica/cmake-build-debug/CMakeFiles/CofoGenericoAlunoC.dir/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

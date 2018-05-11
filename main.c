@@ -4,95 +4,130 @@
 
 int main() {
     //DECLARAÇÃO DAS VARIÁVEIS
-    cofo *c;
-    int b,d,tam;
+    sllist *l;
+    int b,d;
     int resp,modo = 100;
     //INICIO DO MENU
     while(modo != 0){
         //IMPRIME TODAS AS OPÇÕES NA TELA
         if (modo == 100){
             modo = 101;
-            printf("1 - Criar Coleção\n");
-            printf("2 - Criar e Inserir Aluno na Coleção\n");
-            printf("3 - Procurar Aluno na Coleção\n");
-            printf("4 - Remover Ultimo Aluno da Coleção\n");
-            printf("5 - Remover Aluno Escolhido da Coleção\n");
-            printf("6 - Destruir Coleção\n");
+            printf("\n");
+            printf("1 - Criar Lista\n");
+            printf("2 - Inserir no Começo da Lista\n");
+            printf("3 - Inserir no Fim da Lista\n");
+            printf("4 - Inserir no Antes do Especificado da Lista\n");
+            printf("5 - Inserir no Depois do Especificado da Lista\n");
+            printf("6 - Procurar Elemento na Lista\n");
+            printf("7 - Remover Primeiro Elemento da Lista\n");
+            printf("8 - Remover Ultimo Elemento da Lista\n");
+            printf("9 - Remover Elemento Escolhido da Lista\n");
+            printf("10 - Destruir Lista\n");
+            printf("11 - Imprimir Lista\n");
+            printf("12 - Numero de Nos na Lista\n");
             printf("0 - Sair\n");
             printf("Escolha uma Opção: ");
             scanf("%i",&modo);
+            printf("\n");
         }
-        //ESCOLHE A OPÇÃO DE CRIAR A COLEÇÃO
+        //ESCOLHE A OPÇÃO DE CRIAR A LISTA
         if(modo == 1){
-            if(c == NULL){
-                printf("Informe o tamanho do Cofo: \n");
-                scanf("%i",&tam);
-                if(tam > 0){
-                    c = cofoCreate(tam);
-                }
-
-                modo = 100;
-            }else{
-                printf("Cofo ja foi criado com %i elementos\n",tam);
+            if(l != NULL){
+                    l = sllCreate();
+            }else if (l->first != NULL){
+                printf("Cofo ja foi criado com %i elementos\n", sllNumNodes(l));
                 modo = 100;
             }
+        modo = 100;
         }
-        //ESCOLHE A OPÇÃO DE CRIAR E INSERIR UM ALUNO NA COLEÇÃO
+        //ESCOLHE A OPÇÃO DE INSERIR UM ELEMENTO NO COMEÇO DA LISTA
         if(modo == 2){
-            aluno *a;
-            a = (aluno*)malloc(sizeof(aluno));
-            long cpf;
-            char nome[60];
-            int idade;
-            printf("Informe o nome do Aluno: \n");
-            scanf("%s",nome);
-            fflush(stdin);
-            printf("Informe o CPF do Aluno: \n");
-            scanf("%li",&cpf);
-            //scanf("%c",&nome);
-            printf("Informe a idade do Aluno: \n");
-            scanf("%i",&idade);
-            a = alunoCreate(cpf,nome,idade);
-            cofoInsert(c,(void*)a);
-            modo = 100;
-        }
-        //ESCOLHE A OPÇÃO DE PROCURAR UM ALUNO NA COLEÇÃO
-        if(modo == 3){
-            aluno *alunoAux;
-            printf("Pelo o quê você quer procurar?\n1- Nome\n2-CPF\n");
-            scanf("%i",&b);
-            //ESCOLHE A OPÇÃO DE PROCURAR POR NOME
-            if(b == 1){
-                char nomeProcurado[60];
-                printf("Qual o nome pelo qual quer procurar? ");
-                scanf("%s",nomeProcurado);
-                fflush(stdin);
-                alunoAux = (aluno*)cofoQuery(c,(void*)&nomeProcurado,CmpNomeAluno);
-                if(alunoAux != NULL){
-                    printf("Aluno: %s\t Cpf: %li\t Idade: %i\n",alunoAux->nome,alunoAux->CPF,alunoAux->idade);
-                }else{
-                    printf("Nao Encontrado\n");
-                }
-                modo = 100;
-                //ESCOLHE A OPÇÃO DE PROCURAR POR CPF
-            }else if(b == 2){
-                long int cpfProcurado;
-                printf("Qual o cpf pelo qual quer procurar? ");
-                scanf("%li",&cpfProcurado);
-                alunoAux = (aluno*)cofoQuery(c,(void*)&cpfProcurado,CmpCPFAluno);
-                if(alunoAux != NULL){
-                    printf("Aluno: %s\t Cpf: %li\t Idade: %i\n",alunoAux->nome,alunoAux->CPF,alunoAux->idade);
-                }else{
-                    printf("Nao Encontrado\n");
-                }
-                modo = 100;
+            int x;
+            printf("Informe o numero que quer inserir: \n");
+            scanf("%i",&x);
+            int stat = sllInsertFirst(l,(void*)x);
+            if(stat == 1){
+                printf("Elemento Inserido com Sucesso!\n");
+            }else{
+                printf("Falha ao Inserir Elemento\n");
             }
             modo = 100;
-
         }
-        //ESCOLHE A OPÇÃO DE REMOVER O ULTIMO ALUNO DA COLEÇÃO
+        //INSERE NO FINAL DA LISTA
+        if(modo == 3){
+            int x;
+            printf("Informe o numero que quer inserir: \n");
+            scanf("%i",&x);
+            int stat = sllInsertLast(l,(void*)x);
+            if(stat == 1){
+                printf("Elemento Inserido com Sucesso!\n");
+            }else{
+                printf("Falha ao Inserir Elemento\n");
+            }
+            modo = 100;
+        }
         if(modo == 4){
-            void *x = cofoRemoveLast(c);
+            //fflush(stdin);
+            int numProcurado;
+            printf("Informe qual numero quer achar: ");
+            scanf("%i",&numProcurado);
+            int x;
+            printf("Informe o numero que quer inserir: \n");
+            scanf("%i",&x);
+            int stat = sllInsertBeforeSpec(l,(void*)numProcurado, CmpData,(void*)x);
+            if(stat == 1){
+                printf("Elemento Inserido com Sucesso!\n");
+            }else{
+                printf("Falha ao Inserir Elemento\n");
+            }
+            modo = 100;
+        }
+        if(modo == 5){
+            int numProcurado;
+            printf("Informe qual numero quer achar: ");
+            scanf("%i",&numProcurado);
+            int x;
+            printf("Informe o numero que quer inserir: \n");
+            scanf("%i",&x);
+            int stat = sllInsertAfterSpec(l,(void*)numProcurado, CmpData,(void*)x);
+            if(stat == 1){
+                printf("Elemento Inserido com Sucesso!\n");
+            }else{
+                printf("Falha ao Inserir Elemento\n");
+            }
+            modo = 100;
+        }
+        //ESCOLHE A OPÇÃO DE PROCURAR UM ELEMENTO NA LISTA
+        if(modo == 6){
+            int data;
+            int ocorrencia;
+            int numProcurado;
+            printf("Qual o numero pelo qual quer procurar? ");
+            scanf("%i",&numProcurado);
+            data = (int)sllquery(l,(void*)numProcurado, CmpData);
+            ocorrencia = sllNumOcurr(l,(void*)numProcurado, CmpData);
+            if(ocorrencia != NULL){
+                printf("Numero Encontrado %d vezes!\n", ocorrencia);
+            }else{
+                printf("Nao Encontrado\n");
+
+            }
+
+            modo = 100;
+        }
+        //ESCOLHE A OPÇÃO DE REMOVER O PRIMEIRO ELEMENTO DA LISTA
+        if(modo == 7){
+            void *x = sllRemoveFirst(l);
+            if(x != NULL){
+                printf("Primeiro Elemento Removido\n");
+            }else{
+                printf("Primeiro Elemento Não Foi Removido\n");
+            }
+            modo = 100;
+        }
+        //ESCOLHE A OPÇÃO DE REMOVER O ULTIMO ELEMENTO DA LISTA
+        if(modo == 8){
+            void *x = sllRemoveLast(l);
             if(x != NULL){
                 printf("Ultimo Elemento Removido\n");
             }else{
@@ -100,58 +135,51 @@ int main() {
             }
             modo = 100;
         }
-        //ESCOLHE A OPÇÃO DE REMOVER O ALUNO SELECIONADO DA COLEÇÃO
-        if(modo == 5){
-            aluno *alunoAux2;
-            printf("Pelo o quê você quer procurar?\n1- Nome\n2-CPF\n");
-            scanf("%i",&b);
-            //ESCOLHE A OPÇÃO DE PROCURAR POR NOME
-            if(b == 1){
-                char nomeProcurado[60];
-                printf("Qual o nome pelo qual quer procurar? ");
-                scanf("%s",nomeProcurado);
-                fflush(stdin);
-                alunoAux2 = (aluno*)cofoRemove(c,(void*)&nomeProcurado,CmpNomeAluno);
-                if(alunoAux2 != NULL){
-                    printf("Aluno: %s\t Cpf: %li\t Idade: %i\n",alunoAux2->nome,alunoAux2->CPF,alunoAux2->idade);
-                }else{
-                    printf("Nao Encontrado\n");
-                }
-                modo = 100;
-                //ESCOLHE A OPÇÃO DE PROCURAR POR CPF
-            }else if(b == 2){
-                long int cpfProcurado;
-                printf("Qual o cpf pelo qual quer procurar? ");
-                scanf("%li",&cpfProcurado);
-                alunoAux2 = (aluno*)cofoRemove(c,(void*)&cpfProcurado,CmpCPFAluno);
-                if(alunoAux2 != NULL){
-                    printf("Aluno: %s\t Cpf: %li\t Idade: %i\n",alunoAux2->nome,alunoAux2->CPF,alunoAux2->idade);
-                }else{
-                    printf("Nao Encontrado\n");
-                }
-                modo = 100;
+        //ESCOLHE A OPÇÃO DE REMOVER O ELEMENTO SELECIONADO DA LISTA
+        if(modo == 9){
+            int data;
+            int numProcurado;
+            //numProcurado = (int*)malloc(sizeof(int));
+            printf("Qual o numero que quer procurar? ");
+            scanf("%i",&numProcurado);
+            data = (int)sllRemoveSpec(l,(void*)numProcurado,CmpData);
+            if(data != NULL){
+                printf("Elemento %d removido\n",data);
+            }else{
+                printf("Elemento %d Nao Encontrado\n",numProcurado);
             }
             modo = 100;
 
         }
-        //ESCOLHE A OPÇÃO DE DESTRUIR A COLEÇÃO
-        if(modo == 6){
-            if(c != NULL){
-                if(c->elm == 0){
-                    int flag = cofoDestroy(c);
+        //ESCOLHE A OPÇÃO DE DESTRUIR A LISTA
+        if(modo == 10){
+            if(l != NULL){
+                if(sllNumNodes(l) == 0){
+                    int flag = sllDestroy(l);
                     if (flag == 1){
-                        printf("Cofo destruído com Sucesso!\n");
+                        printf("Lista destruída com Sucesso!\n");
                     }else{
-                        printf("Falha ao destruir o Cofo!\n");
+                        printf("Falha ao destruir a Lista!\n");
                     }
                 }else{
-                    printf("Ainda tem %d elementos dentro do Cofo\n",c->elm);
+                    printf("Ainda tem %d elementos dentro da Lista\n",sllNumNodes(l));
                 }
             } else{
-                printf("Coleção não existe!\n");
+                printf("Lista não existe!\n");
             }
 
             modo = 100;
         }
+        //IMPRIME A LISTA
+        if(modo == 11){
+            sllImprime(l);
+            modo = 100;
+        }
+        //QUANTOS NÓS TEM A LISTA
+        if(modo == 12){
+            printf("A Lista tem %i Elementos\n",sllNumNodes(l));
+            modo = 100;
+        }
+
     }
 }

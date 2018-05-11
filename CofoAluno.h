@@ -8,21 +8,28 @@ typedef struct _slnode_{
 }slnode;
 
 //CRIA ESTRUTURA LISTA
-typedef struct _sll_ {
+typedef struct _sllist_ {
     slnode *first;
+    slnode *cur;
 }sllist;
 
 //HEADERS DA LISTA SIMPLESMENTE ENCADEADA
-cofo *cofoCreate(int max);
-int cofoDestroy(cofo *c);
-int cofoInsert(cofo *c, void *x);
-void *cofoQuery(cofo *c,void* key,int (*cmp)(void*,void*));
-void *cofoRemoveLast(cofo *c);
-aluno *alunoCreate(long int cpf,char *nome,int idade);
-void *cofoRemove(cofo *c,void *key,int (*cmp)(void*,void*));
+sllist *sllCreate();
+int sllDestroy(sllist *l);
+int sllInsertFirst(sllist *l, void *data);
+int sllInsertLast(sllist *l, void *data);
+int sllInsertBeforeSpec(sllist *l, void *key, int(*cmp)(void*,void*),void* data);
+int sllInsertAfterSpec(sllist *l, void *key, int (*cmp)(void *, void *), void *data);
+void *sllquery(sllist *l, void *key, int (*cmp)( void *, void *));
+void *sllRemoveFirst(sllist *l);
+void *sllRemoveLast(sllist *l);
+void *sllRemoveSpec(sllist *l,void *key,int(*cmp)(void*,void*));
+int sllNumNodes(sllist *l);
+int sllNumOcurr(sllist *l,void *key,int (*cmp)(void *,void *));
+void sllImprime(sllist *l);
 //HEADERS DO ALUNO
-int CmpCPFAluno(void *a, void *b);
-int CmpNomeAluno(void *a, void*b);
+int CmpData(void *a, void *b);
+
 
 #endif
 
