@@ -7,7 +7,7 @@
 #define TRUE 1
 #define FALSE 0
 
-//CRIA LISTA SIMPLESMENTE ENCADEADA if(c != NULL){
+//CRIA LISTA SIMPLESMENTE ENCADEADA
 sllist *sllCreate(){
     sllist *l;
     l = (sllist*)malloc(sizeof(sllist));
@@ -45,7 +45,7 @@ void *sllRemoveFirst( sllist *l){
     }
     return NULL;
 }
-
+//REMOVE O ULTIMO DA LISTA
 void *sllRemoveLast(sllist *l){
     slnode *cur;
     slnode *prev = NULL;
@@ -224,7 +224,7 @@ int sllNumNodes(sllist *l){
             return i;
         }
     }
-    return NULL;
+    return -1;
 }
 // IMPRIME OS NÓS DA LISTA
 void sllImprime(sllist *l){
