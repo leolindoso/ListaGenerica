@@ -12,20 +12,23 @@ int main() {
         //IMPRIME TODAS AS OPÇÕES NA TELA
         if (modo == 100){
             modo = 101;
+            printf("\n");
             printf("1 - Criar Lista\n");
             printf("2 - Inserir no Começo da Lista\n");
             printf("3 - Inserir no Fim da Lista\n");
             printf("4 - Inserir no Antes do Especificado da Lista\n");
             printf("5 - Inserir no Depois do Especificado da Lista\n");
             printf("6 - Procurar Elemento na Lista\n");
-            printf("7 - Remover Ultimo Elemento da Lista\n");
-            printf("8 - Remover Elemento Escolhido da Lista\n");
-            printf("9 - Destruir Lista\n");
-            printf("10 - Imprimir Lista\n");
-            printf("11 - Numero de Nos na Lista\n");
+            printf("7 - Remover Primeiro Elemento da Lista\n");
+            printf("8 - Remover Ultimo Elemento da Lista\n");
+            printf("9 - Remover Elemento Escolhido da Lista\n");
+            printf("10 - Destruir Lista\n");
+            printf("11 - Imprimir Lista\n");
+            printf("12 - Numero de Nos na Lista\n");
             printf("0 - Sair\n");
             printf("Escolha uma Opção: ");
             scanf("%i",&modo);
+            printf("\n");
         }
         //ESCOLHE A OPÇÃO DE CRIAR A LISTA
         if(modo == 1){
@@ -50,24 +53,80 @@ int main() {
             }
             modo = 100;
         }
+        //INSERE NO FINAL DA LISTA
+        if(modo == 3){
+            int x;
+            printf("Informe o numero que quer inserir: \n");
+            scanf("%i",&x);
+            int stat = sllInsertLast(l,(void*)x);
+            if(stat == 1){
+                printf("Elemento Inserido com Sucesso!\n");
+            }else{
+                printf("Falha ao Inserir Elemento\n");
+            }
+            modo = 100;
+        }
+        if(modo == 4){
+            //fflush(stdin);
+            int numProcurado;
+            printf("Informe qual numero quer achar: ");
+            scanf("%i",&numProcurado);
+            int x;
+            printf("Informe o numero que quer inserir: \n");
+            scanf("%i",&x);
+            int stat = sllInsertBeforeSpec(l,(void*)numProcurado, CmpData,(void*)x);
+            if(stat == 1){
+                printf("Elemento Inserido com Sucesso!\n");
+            }else{
+                printf("Falha ao Inserir Elemento\n");
+            }
+            modo = 100;
+        }
+        if(modo == 5){
+            int numProcurado;
+            printf("Informe qual numero quer achar: ");
+            scanf("%i",&numProcurado);
+            int x;
+            printf("Informe o numero que quer inserir: \n");
+            scanf("%i",&x);
+            int stat = sllInsertAfterSpec(l,(void*)numProcurado, CmpData,(void*)x);
+            if(stat == 1){
+                printf("Elemento Inserido com Sucesso!\n");
+            }else{
+                printf("Falha ao Inserir Elemento\n");
+            }
+            modo = 100;
+        }
         //ESCOLHE A OPÇÃO DE PROCURAR UM ELEMENTO NA LISTA
         if(modo == 6){
             int data;
+            int ocorrencia;
             int numProcurado;
             printf("Qual o numero pelo qual quer procurar? ");
             scanf("%i",&numProcurado);
-            data = (int)sllquery(l,(void*)&numProcurado, CmpData);
-            if(data != NULL){
-                printf("Numero Encontrado!\n");
+            data = (int)sllquery(l,(void*)numProcurado, CmpData);
+            ocorrencia = sllNumOcurr(l,(void*)numProcurado, CmpData);
+            if(ocorrencia != NULL){
+                printf("Numero Encontrado %d vezes!\n", ocorrencia);
             }else{
                 printf("Nao Encontrado\n");
 
             }
-            modo = 100;
 
+            modo = 100;
+        }
+        //ESCOLHE A OPÇÃO DE REMOVER O PRIMEIRO ELEMENTO DA LISTA
+        if(modo == 7){
+            void *x = sllRemoveFirst(l);
+            if(x != NULL){
+                printf("Primeiro Elemento Removido\n");
+            }else{
+                printf("Primeiro Elemento Não Foi Removido\n");
+            }
+            modo = 100;
         }
         //ESCOLHE A OPÇÃO DE REMOVER O ULTIMO ELEMENTO DA LISTA
-        if(modo == 7){
+        if(modo == 8){
             void *x = sllRemoveLast(l);
             if(x != NULL){
                 printf("Ultimo Elemento Removido\n");
@@ -77,7 +136,7 @@ int main() {
             modo = 100;
         }
         //ESCOLHE A OPÇÃO DE REMOVER O ELEMENTO SELECIONADO DA LISTA
-        if(modo == 8){
+        if(modo == 9){
             int data;
             int numProcurado;
             //numProcurado = (int*)malloc(sizeof(int));
@@ -93,7 +152,7 @@ int main() {
 
         }
         //ESCOLHE A OPÇÃO DE DESTRUIR A LISTA
-        if(modo == 9){
+        if(modo == 10){
             if(l != NULL){
                 if(sllNumNodes(l) == 0){
                     int flag = sllDestroy(l);
@@ -111,13 +170,16 @@ int main() {
 
             modo = 100;
         }
-        if(modo == 10){
+        //IMPRIME A LISTA
+        if(modo == 11){
             sllImprime(l);
             modo = 100;
         }
-        if(modo == 11){
+        //QUANTOS NÓS TEM A LISTA
+        if(modo == 12){
             printf("A Lista tem %i Elementos\n",sllNumNodes(l));
             modo = 100;
         }
+
     }
 }

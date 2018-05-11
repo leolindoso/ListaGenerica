@@ -123,8 +123,8 @@ int sllInsertLast(sllist *l, void *data){
     return FALSE;
 }
 
-// INSERE ANTES DO NÓ ESPECIFICADO
-int sllInseAfterSpec(sllist *l, void *key, int (*cmp)(void *, void *), void *data){
+// INSERE DEPOIS DO NÓ ESPECIFICADO
+int sllInsertAfterSpec(sllist *l, void *key, int (*cmp)(void *, void *), void *data){
     slnode *cur, *newnode;
     int stat;
     if (l != NULL){
@@ -148,7 +148,7 @@ int sllInseAfterSpec(sllist *l, void *key, int (*cmp)(void *, void *), void *dat
     }
     return FALSE;
 }
-
+// INSERE ANTES DO ESPECIFICADO
 int sllInsertBeforeSpec(sllist *l, void *key, int(*cmp)(void*,void*),void* data){
     slnode *cur,*newnode,*prev;
     int stat;
@@ -179,7 +179,7 @@ int sllInsertBeforeSpec(sllist *l, void *key, int(*cmp)(void*,void*),void* data)
     }
     return FALSE;
 }
-
+// REMOVE ESPECIFICADO
 void *sllRemoveSpec(sllist *l,void *key,int(*cmp)(void*,void*)){
     slnode *cur,*newnode,*prev;
     void *data;
@@ -209,7 +209,7 @@ void *sllRemoveSpec(sllist *l,void *key,int(*cmp)(void*,void*)){
     return NULL;
 }
 
-
+//RETORNA O NUMERO DE NÓS
 int sllNumNodes(sllist *l){
     if(l != NULL){
         if(l->first != NULL){
@@ -226,7 +226,7 @@ int sllNumNodes(sllist *l){
     }
     return NULL;
 }
-
+// IMPRIME OS NÓS DA LISTA
 void sllImprime(sllist *l){
     if(l != NULL){
         if(l->first != NULL){
@@ -253,6 +253,25 @@ int CmpData(void *a, void *b){
     return FALSE;
 }
 
+// RETORNA O NUMERO DE OCORRENCIAS DE UM ELEMENTO
+int sllNumOcurr(sllist *l,void *key,int (*cmp)(void *,void *)){
+    if(l!= NULL){
+        if(l->first != NULL){
+            int stat ;
+            int i = 0;
+            l->cur = l->first;
+            while(l->cur != NULL){
+                stat = cmp(key,l->cur->data);
+                if (stat == TRUE){
+                    i++;
+                }
+                l->cur = l->cur->next;
+
+            }
+            return i;
+        }
+    }
+}
 #endif
 
 
